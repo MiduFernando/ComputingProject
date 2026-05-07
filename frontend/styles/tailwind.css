@@ -1,0 +1,55 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+/* Beautiful Healthcare Color Extensions */
+@theme {
+  /* Medical Blue Palette */
+  --color-medical-50: #E3F2FD;
+  --color-medical-100: #BBDEFB;
+  --color-medical-200: #90CAF9;
+  --color-medical-300: #64B5F6;
+  --color-medical-400: #42A5F5;
+  --color-medical-500: #1E88E5;
+  --color-medical-600: #1976D2;
+  --color-medical-700: #1565C0;
+  --color-medical-800: #0D47A1;
+  --color-medical-900: #0A3D91;
+  
+  /* Healthcare Red Palette */
+  --color-healthcare-50: #FFEBEE;
+  --color-healthcare-100: #FFCDD2;
+  --color-healthcare-200: #EF9A9A;
+  --color-healthcare-300: #E57373;
+  --color-healthcare-400: #EF5350;
+  --color-healthcare-500: #F44336;
+  --color-healthcare-600: #E53935;
+  --color-healthcare-700: #D32F2F;
+  --color-healthcare-800: #C62828;
+  --color-healthcare-900: #B71C1C;
+  
+  /* Success Green Palette */
+  --color-success-50: #ECFDF5;
+  --color-success-100: #D1FAE5;
+  --color-success-200: #A7F3D0;
+  --color-success-300: #6EE7B7;
+  --color-success-400: #34D399;
+  --color-success-500: #10B981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-success-800: #065F46;
+  --color-success-900: #064E3B;
+  
+  /* Premium Purple Palette */
+  --color-premium-50: #F5F3FF;
+  --color-premium-100: #EDE9FE;
+  --color-premium-200: #DDD6FE;
+  --color-premium-300: #C4B5FD;
+  --color-premium-400: #A78BFA;
+  --color-premium-500: #8B5CF6;
+  --color-premium-600: #7C3AED;
+  --color-premium-700: #6D28D9;
+  --color-premium-800: #5B21B6;
+  --color-premium-900: #4C1D95;
+}
