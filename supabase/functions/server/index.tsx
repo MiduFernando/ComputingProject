@@ -63,12 +63,12 @@ app.use(
 );
 
 // Health check endpoint
-app.get("/make-server-6df55b61/health", (c) => {
+app.get("/health", (c) => {
   return c.json({ status: "ok" });
 });
 
 // Initialize demo users and data (one-time setup)
-app.post("/make-server-6df55b61/init-demo-data", async (c) => {
+app.post("/init-demo-data", async (c) => {
   try {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     
@@ -190,7 +190,7 @@ app.post("/make-server-6df55b61/init-demo-data", async (c) => {
 // ==================== AUTH ROUTES ====================
 
 // Register new user
-app.post("/make-server-6df55b61/auth/register", async (c) => {
+app.post("/auth/register", async (c) => {
   try {
     const { email, password, name, phone, role = "patient", specialization, hospitalId } = await c.req.json();
 
@@ -275,7 +275,7 @@ app.post("/make-server-6df55b61/auth/register", async (c) => {
 });
 
 // Login user
-app.post("/make-server-6df55b61/auth/login", async (c) => {
+app.post("/auth/login", async (c) => {
   try {
     const { email, password } = await c.req.json();
 
@@ -312,7 +312,7 @@ app.post("/make-server-6df55b61/auth/login", async (c) => {
 // ==================== HOSPITAL ROUTES ====================
 
 // Get all hospitals
-app.get("/make-server-6df55b61/hospitals", async (c) => {
+app.get("/hospitals", async (c) => {
   try {
     const hospitals = await kv.getByPrefix("hospital:");
     return c.json({ hospitals: hospitals || [] });
@@ -323,7 +323,7 @@ app.get("/make-server-6df55b61/hospitals", async (c) => {
 });
 
 // Get hospital by ID
-app.get("/make-server-6df55b61/hospitals/:id", async (c) => {
+app.get("/hospitals/:id", async (c) => {
   try {
     const id = c.req.param("id");
     const hospital = await kv.get(`hospital:${id}`);
@@ -342,7 +342,7 @@ app.get("/make-server-6df55b61/hospitals/:id", async (c) => {
 // ==================== DOCTOR ROUTES ====================
 
 // Get doctors by hospital ID
-app.get("/make-server-6df55b61/doctors/hospital/:hospitalId", async (c) => {
+app.get("/doctors/hospital/:hospitalId", async (c) => {
   try {
     const hospitalId = c.req.param("hospitalId");
     const allDoctors = await kv.getByPrefix("doctor:");
@@ -357,7 +357,7 @@ app.get("/make-server-6df55b61/doctors/hospital/:hospitalId", async (c) => {
 });
 
 // Get doctor by ID
-app.get("/make-server-6df55b61/doctors/:id", async (c) => {
+app.get("/doctors/:id", async (c) => {
   try {
     const id = c.req.param("id");
     const doctor = await kv.get(`doctor:${id}`);
@@ -376,7 +376,7 @@ app.get("/make-server-6df55b61/doctors/:id", async (c) => {
 // ==================== APPOINTMENT ROUTES ====================
 
 // Create appointment
-app.post("/make-server-6df55b61/appointments", async (c) => {
+app.post("/appointments", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -424,7 +424,7 @@ app.post("/make-server-6df55b61/appointments", async (c) => {
 });
 
 // Get user appointments
-app.get("/make-server-6df55b61/appointments/user", async (c) => {
+app.get("/appointments/user", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -445,7 +445,7 @@ app.get("/make-server-6df55b61/appointments/user", async (c) => {
 });
 
 // Get appointment by ID
-app.get("/make-server-6df55b61/appointments/:id", async (c) => {
+app.get("/appointments/:id", async (c) => {
   try {
     const id = c.req.param("id");
     const appointment = await kv.get(`appointment:${id}`);
@@ -462,7 +462,7 @@ app.get("/make-server-6df55b61/appointments/:id", async (c) => {
 });
 
 // Update appointment status
-app.put("/make-server-6df55b61/appointments/:id/status", async (c) => {
+app.put("/appointments/:id/status", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -494,7 +494,7 @@ app.put("/make-server-6df55b61/appointments/:id/status", async (c) => {
 });
 
 // Cancel appointment
-app.delete("/make-server-6df55b61/appointments/:id", async (c) => {
+app.delete("/appointments/:id", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -530,7 +530,7 @@ app.delete("/make-server-6df55b61/appointments/:id", async (c) => {
 // ==================== DOCTOR ROUTES ====================
 
 // Get doctor's appointments (doctor only)
-app.get("/make-server-6df55b61/doctor/appointments", async (c) => {
+app.get("/doctor/appointments", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -565,7 +565,7 @@ app.get("/make-server-6df55b61/doctor/appointments", async (c) => {
 });
 
 // Update appointment status (doctor only)
-app.put("/make-server-6df55b61/doctor/appointments/:id/status", async (c) => {
+app.put("/doctor/appointments/:id/status", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -612,7 +612,7 @@ app.put("/make-server-6df55b61/doctor/appointments/:id/status", async (c) => {
 // ==================== ADMIN ROUTES ====================
 
 // Get all appointments (admin only)
-app.get("/make-server-6df55b61/admin/appointments", async (c) => {
+app.get("/admin/appointments", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -631,7 +631,7 @@ app.get("/make-server-6df55b61/admin/appointments", async (c) => {
 });
 
 // Get dashboard statistics (admin only)
-app.get("/make-server-6df55b61/admin/stats", async (c) => {
+app.get("/admin/stats", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -664,7 +664,7 @@ app.get("/make-server-6df55b61/admin/stats", async (c) => {
 });
 
 // Delete user account (admin only)
-app.delete("/make-server-6df55b61/admin/users/:userId", async (c) => {
+app.delete("/admin/users/:userId", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -726,7 +726,7 @@ app.delete("/make-server-6df55b61/admin/users/:userId", async (c) => {
 });
 
 // Get all users (admin only)
-app.get("/make-server-6df55b61/admin/users", async (c) => {
+app.get("/admin/users", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -745,7 +745,7 @@ app.get("/make-server-6df55b61/admin/users", async (c) => {
 });
 
 // Admin password verification route
-app.post("/make-server-6df55b61/admin/verify", async (c) => {
+app.post("/admin/verify", async (c) => {
   try {
     const body = await c.req.json();
     const { password } = body;
@@ -778,7 +778,7 @@ app.post("/make-server-6df55b61/admin/verify", async (c) => {
 });
 
 // Get pending approvals (admin only)
-app.get("/make-server-6df55b61/admin/pending-approvals", async (c) => {
+app.get("/admin/pending-approvals", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -797,7 +797,7 @@ app.get("/make-server-6df55b61/admin/pending-approvals", async (c) => {
 });
 
 // Approve user registration (admin only)
-app.post("/make-server-6df55b61/admin/approve-user/:userId", async (c) => {
+app.post("/admin/approve-user/:userId", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -835,7 +835,7 @@ app.post("/make-server-6df55b61/admin/approve-user/:userId", async (c) => {
 });
 
 // Reject user registration (admin only)
-app.delete("/make-server-6df55b61/admin/reject-user/:userId", async (c) => {
+app.delete("/admin/reject-user/:userId", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -869,7 +869,7 @@ app.delete("/make-server-6df55b61/admin/reject-user/:userId", async (c) => {
 // ==================== PATIENT QR CODE & MEDICAL HISTORY ROUTES ====================
 
 // Generate QR code for patient
-app.get("/make-server-6df55b61/patient/qr/:userId", async (c) => {
+app.get("/patient/qr/:userId", async (c) => {
   try {
     const userId = c.req.param("userId");
     
@@ -905,7 +905,7 @@ app.get("/make-server-6df55b61/patient/qr/:userId", async (c) => {
 });
 
 // Get patient medical history (requires valid token)
-app.get("/make-server-6df55b61/patient/history/:userId", async (c) => {
+app.get("/patient/history/:userId", async (c) => {
   try {
     const userId = c.req.param("userId");
     const token = c.req.query("token");
@@ -1006,7 +1006,7 @@ app.get("/make-server-6df55b61/patient/history/:userId", async (c) => {
 });
 
 // Add medical record (doctor/admin only)
-app.post("/make-server-6df55b61/medical-records", async (c) => {
+app.post("/medical-records", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -1041,7 +1041,7 @@ app.post("/make-server-6df55b61/medical-records", async (c) => {
 });
 
 // Update patient profile (add blood group, allergies, etc.)
-app.put("/make-server-6df55b61/patient/profile", async (c) => {
+app.put("/patient/profile", async (c) => {
   try {
     const authHeader = c.req.header("Authorization");
     const accessToken = authHeader?.split(" ")[1];
@@ -1083,7 +1083,7 @@ function generateSecureToken(userId: string): string {
 // ==================== AI RECOMMENDATION ROUTES ====================
 
 // AI Doctor Recommendation
-app.post("/make-server-6df55b61/ai/recommend-doctors", async (c) => {
+app.post("/ai/recommend-doctors", async (c) => {
   try {
     console.log("=== AI Recommendation Request Started ===");
     

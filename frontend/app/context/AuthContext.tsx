@@ -23,7 +23,15 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const API_URL = `https://${projectId}.supabase.co/functions/v1/make-server-6df55b61`;
+const API_URL = `https://${projectId}.supabase.co/functions/v1/make-server-6df55b61/auth`;
+
+const parseJson = async (response: Response) => {
+  try {
+    return await response.json();
+  } catch {
+    return null;
+  }
+};
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
@@ -54,8 +62,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Login failed');
+        const errorData = await parseJson(response);
+        throw new Error(errorData?.message || errorData?.error || 'Login failed');
       }
 
       const data = await response.json();
@@ -91,8 +99,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Registration failed');
+        const errorData = await parseJson(response);
+        throw new Error(errorData?.message || errorData?.error || 'Registration failed');
       }
 
       const data = await response.json();
