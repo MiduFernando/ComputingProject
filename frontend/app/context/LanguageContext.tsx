@@ -68,6 +68,136 @@ const translations: Translations = {
     si: "දැන් හමුවීමක් වෙන්කරවා ගන්න",
     ta: "இப்போது சந்திப்பை பதிவு செய்யுங்கள்",
   },
+  getStarted: {
+    en: "Get Started",
+    si: "ආරම්භ කරන්න",
+    ta: "தொடங்கு",
+  },
+  getAIRecommendations: {
+    en: "Get AI Recommendations",
+    si: "AI නිර්දේශ ලබා ගන්න",
+    ta: "AI பரிந்துரைகளைப் பெறவும்",
+  },
+  expertConsultations: {
+    en: "Expert Consultations",
+    si: "වෘත්තීය සම්බන්ධතා",
+    ta: "திறமையான ஆலோசனைகள்",
+  },
+  professionalMedicalAdvice: {
+    en: "Professional medical advice",
+    si: "වෘත්තීය වෛද්‍ය උපදෙස්",
+    ta: "தொழில்முறை மருத்துவ ஆலோசனை",
+  },
+  professionalMedicalTeam: {
+    en: "Professional Medical Team",
+    si: "වෘත්තීය වෛද්‍ය කණ්ඩායම",
+    ta: "தொழில்முறை மருத்துவ குழு",
+  },
+  experiencedHealthcareExperts: {
+    en: "Experienced healthcare experts",
+    si: "පළපුරුදු සෞඛ්‍ය විශේෂඥයින්",
+    ta: "அனுபவமிக்க சுகாதார நிபுணர்கள்",
+  },
+  modernFacilities: {
+    en: "Modern Facilities",
+    si: "ආධುನික පහසුකම්",
+    ta: "நவீன வசதிகள்",
+  },
+  stateOfTheArtEquipment: {
+    en: "State-of-the-art equipment",
+    si: "අවසාන තත්ත්වයේ උපකරණ",
+    ta: "முன்னணி تجهيزات",
+  },
+  whyChooseTitle: {
+    en: "Why Choose e-Health Connect?",
+    si: "e-Health Connect තෝරා ගන්නේ ඇයි?",
+    ta: "e-Health Connect ஐ ஏன் தேர்வு செய்ய வேண்டும்?",
+  },
+  ourImpactTitle: {
+    en: "Our Impact in Numbers",
+    si: "අපගේ සංඛ්‍යාවලින් බලපෑම",
+    ta: "எண்ணிக்கைகளில் எங்கள் தாக்கம்",
+  },
+  patientsServed: {
+    en: "Patients Served",
+    si: "සේවය ලබාදුන් රෝගීන්",
+    ta: "சேவை பெற்ற நோயாளிகள்",
+  },
+  expertDoctors: {
+    en: "Expert Doctors",
+    si: "පළපුරුදු වෛද්‍යවරු",
+    ta: "திறமையான மருத்துவர்கள்",
+  },
+  hospitalsStat: {
+    en: "Hospitals",
+    si: "රෝහල්",
+    ta: "மருத்துவமனைகள்",
+  },
+  secureAndSafe: {
+    en: "Secure & Safe",
+    si: "ආරක්ෂිත සහ සුරක්ෂිත",
+    ta: "பாதுகாப்பான மற்றும் பாதுகாப்பான",
+  },
+  smartSolutions: {
+    en: "Smart Solutions",
+    si: "දක්ෂ විසඳුම්",
+    ta: "உள்ளுணர்வு தீர்வுகள்",
+  },
+  aiPoweredHealthcare: {
+    en: "AI-Powered Healthcare",
+    si: "AI සාධක වූ සෞඛ්‍ය සේවා",
+    ta: "AI இயக்கும் சுகாதார சேவை",
+  },
+  aiDescription: {
+    en: "Not sure which doctor to see? Our AI analyzes your symptoms and recommends the best specialists.",
+    si: "කතාකරන වෛද්‍යවරයා තෝරා ගැනීමට නොදැන සිටීද? අපගේ AI ඔබේ රෝග ලක්ෂණ විශ්ලේෂණය කර හොඳම විශේෂඥයින් නිර්දේශ කරයි.",
+    ta: "எந்த மருத்துவரைக் காண வேண்டும் என்று உறுதியாக இல்லையென்றால்? எங்கள் AI உங்கள் அறிகுறிகளை பகுப்பாய்வு செய்து சிறந்த நிபுணர்களை பரிந்துரைக்கிறது.",
+  },
+  intelligentSymptomAnalysis: {
+    en: "Intelligent symptom analysis",
+    si: "බුද්ධිමත් රෝග ලක්ෂණ විශ්ලේෂණය",
+    ta: "ஆய்வான அறிகுறி பகுப்பாய்வு",
+  },
+  personalizedDoctorMatching: {
+    en: "Personalized doctor matching",
+    si: "පෞද්ගලිකව වෛද්‍ය තෝරා ගැනීම",
+    ta: "தனிப்பட்ட மருத்துவர் பொருத்தம்",
+  },
+  instantRecommendations: {
+    en: "Instant recommendations",
+    si: "තත්ක්ෂණික නිර්දේශ",
+    ta: "உடனடி பரிந்துரைகள்",
+  },
+  qrCodeScanner: {
+    en: "QR Code Scanner",
+    si: "QR කේත ස්කෑනර්",
+    ta: "QR குறியீட்டு ஸ்கேனர்",
+  },
+  qrDescription: {
+    en: "Healthcare providers can instantly access patient medical records by scanning QR codes.",
+    si: "සෞඛ්‍ය සපයන්නන්ට QR කේත ස්කෑන් කිරීමෙන් රෝගියාගේ වෛද්‍ය වාර්තා ඉක්මනින් ලබා ගත හැක.",
+    ta: "மருத்துவ சேவை வழங்குநர்கள் QR குறியீடுகளை ஸ்கேன் செய்வதன் மூலம் உடனடியாக நோயாளி மருத்துவ பதிவுகளை அணுக முடியும்.",
+  },
+  quickCameraBasedScanning: {
+    en: "Quick camera-based scanning",
+    si: "ඉක්මන් කැමරා මත පදනම් වූ ස්කෑන කිරීම",
+    ta: "விளைவான கேமரா அடிப்படையிலான ஸ்கேனிங்",
+  },
+  secureEncryptedAccess: {
+    en: "Secure & encrypted access",
+    si: "ආරක්ෂිත සහ එනක්‍රිප්ට් කරන ලද ප්‍රවේශය",
+    ta: "பாதுகாப்பான மற்றும் குறியாக்கப்பட்ட அணுகல்",
+  },
+  instantMedicalRecordRetrieval: {
+    en: "Instant medical record retrieval",
+    si: "තත්ක්ෂණික වෛද්‍ය වාර්තා ලබා ගැනීම",
+    ta: "உடனடி மருத்துவ பதிவுகளைக் கிடைக்கும்",
+  },
+  openQRScanner: {
+    en: "Open QR Scanner",
+    si: "QR ස්කෑනර් විවෘත කරන්න",
+    ta: "QR ஸ்கேனரை திறக்கவும்",
+  },
   // Features
   easyBooking: {
     en: "Easy Booking",

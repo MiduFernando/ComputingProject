@@ -71,10 +71,10 @@ export function Home() {
   ];
 
   const stats = [
-    { icon: Users, value: "50,000+", label: "Patients Served" },
-    { icon: Stethoscope, value: "500+", label: "Expert Doctors" },
-    { icon: Activity, value: "100+", label: "Hospitals" },
-    { icon: Shield, value: "99.9%", label: "Secure & Safe" },
+    { icon: Users, value: "50,000+", label: t("patientsServed") },
+    { icon: Stethoscope, value: "500+", label: t("expertDoctors") },
+    { icon: Activity, value: "100+", label: t("hospitalsStat") },
+    { icon: Shield, value: "99.9%", label: t("secureAndSafe") },
   ];
 
   return (
@@ -137,7 +137,7 @@ export function Home() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover:translate-x-full transition-transform duration-1000"></div>
                 <UserCheck className="w-5 h-5 mr-2 relative z-10 group-hover:animate-bounce" />
-                <span className="relative z-10">{t("getStarted") || "Get Started"}</span>
+                <span className="relative z-10">{t("getStarted")}</span>
               </Button>
             </div>
           </div>
@@ -164,8 +164,8 @@ export function Home() {
                   <div className="w-12 h-12 bg-teal-500 rounded-xl flex items-center justify-center mb-3 shadow-lg">
                     <Stethoscope className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-white font-bold text-xl drop-shadow-lg">Expert Consultations</p>
-                  <p className="text-teal-100 text-sm mt-1">Professional medical advice</p>
+                  <p className="text-white font-bold text-xl drop-shadow-lg">{t("expertConsultations")}</p>
+                  <p className="text-teal-100 text-sm mt-1">{t("professionalMedicalAdvice")}</p>
                 </div>
               </div>
             </div>
@@ -183,8 +183,8 @@ export function Home() {
                   <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center mb-3 shadow-lg">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-white font-bold text-xl drop-shadow-lg">Professional Medical Team</p>
-                  <p className="text-cyan-100 text-sm mt-1">Experienced healthcare experts</p>
+                  <p className="text-white font-bold text-xl drop-shadow-lg">{t("professionalMedicalTeam")}</p>
+                  <p className="text-cyan-100 text-sm mt-1">{t("experiencedHealthcareExperts")}</p>
                 </div>
               </div>
             </div>
@@ -202,8 +202,8 @@ export function Home() {
                   <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-3 shadow-lg">
                     <Activity className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-white font-bold text-xl drop-shadow-lg">Modern Facilities</p>
-                  <p className="text-blue-100 text-sm mt-1">State-of-the-art equipment</p>
+                  <p className="text-white font-bold text-xl drop-shadow-lg">{t("modernFacilities")}</p>
+                  <p className="text-blue-100 text-sm mt-1">{t("stateOfTheArtEquipment")}</p>
                 </div>
               </div>
             </div>
@@ -213,10 +213,10 @@ export function Home() {
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
-                Why Choose e-Health Connect?
+                {t("whyChooseTitle")}
               </span>
               <span className="relative bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
-                Why Choose e-Health Connect?
+                {t("whyChooseTitle")}
               </span>
             </h2>
             <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-teal-500 mx-auto rounded-full animate-pulse"></div>
@@ -271,10 +271,10 @@ export function Home() {
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
-                Our Impact in Numbers
+                {t("ourImpactTitle")}
               </span>
               <span className="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent">
-                Our Impact in Numbers
+                {t("ourImpactTitle")}
               </span>
             </h2>
             <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-emerald-500 mx-auto rounded-full animate-pulse"></div>
@@ -348,10 +348,10 @@ export function Home() {
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
-                Smart Solutions
+                {t("smartSolutions")}
               </span>
               <span className="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                Smart Solutions
+                {t("smartSolutions")}
               </span>
             </h2>
             <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 mx-auto rounded-full animate-pulse"></div>
@@ -385,16 +385,16 @@ export function Home() {
                   {/* Title */}
                   <h3 className="text-2xl font-black mb-3 relative">
                     <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-50">
-                      AI-Powered Healthcare
+                      {t("aiPoweredHealthcare")}
                     </span>
                     <span className="relative bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
-                      AI-Powered Healthcare
+                      {t("aiPoweredHealthcare")}
                     </span>
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-700 mb-6 text-base font-medium">
-                    Not sure which doctor to see? Our AI analyzes your symptoms and recommends the best specialists.
+                    {t("aiDescription")}
                   </p>
 
                   {/* Features List - Enhanced */}
@@ -404,19 +404,19 @@ export function Home() {
                         <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Brain className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold">Intelligent symptom analysis</span>
+                        <span className="font-semibold">{t("intelligentSymptomAnalysis")}</span>
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Users className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold">Personalized doctor matching</span>
+                        <span className="font-semibold">{t("personalizedDoctorMatching")}</span>
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Sparkles className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold">Instant recommendations</span>
+                        <span className="font-semibold">{t("instantRecommendations")}</span>
                       </li>
                     </ul>
                   </div>
@@ -429,7 +429,7 @@ export function Home() {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                     <Brain className="w-5 h-5 mr-2 relative z-10 group-hover/btn:animate-spin" />
-                    <span className="relative z-10">Get AI Recommendations</span>
+                    <span className="relative z-10">{t("getAIRecommendations")}</span>
                   </Button>
                 </div>
               </CardContent>
@@ -461,16 +461,16 @@ export function Home() {
                   {/* Title */}
                   <h3 className="text-2xl font-black mb-3 relative">
                     <span className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-teal-700 bg-clip-text text-transparent blur-sm opacity-50">
-                      QR Code Scanner
+                      {t("qrCodeScanner")}
                     </span>
                     <span className="relative bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
-                      QR Code Scanner
+                      {t("qrCodeScanner")}
                     </span>
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-700 mb-6 text-base font-medium">
-                    Healthcare providers can instantly access patient medical records by scanning QR codes.
+                    {t("qrDescription")}
                   </p>
 
                   {/* Features List - Enhanced */}
@@ -480,19 +480,19 @@ export function Home() {
                         <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Camera className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold">Quick camera-based scanning</span>
+                        <span className="font-semibold">{t("quickCameraBasedScanning")}</span>
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Shield className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold">Secure & encrypted access</span>
+                        <span className="font-semibold">{t("secureEncryptedAccess")}</span>
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <ScanLine className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold">Instant medical record retrieval</span>
+                        <span className="font-semibold">{t("instantMedicalRecordRetrieval")}</span>
                       </li>
                     </ul>
                   </div>
@@ -505,7 +505,7 @@ export function Home() {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-white/40 to-teal-400/0 group-hover/btn:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
                     <QrCode className="w-5 h-5 mr-2 relative z-10 group-hover/btn:animate-bounce" />
-                    <span className="relative z-10">Open QR Scanner</span>
+                    <span className="relative z-10">{t("openQRScanner")}</span>
                   </Button>
                 </div>
               </CardContent>
