@@ -4,8 +4,12 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite"
+    "setup": "node ./scripts/setup.js",
+    "dev": "pnpm --parallel --filter backend --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "build": "pnpm --parallel --filter backend --filter frontend build",
+    "clean": "node ./scripts/cleanup.js"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
