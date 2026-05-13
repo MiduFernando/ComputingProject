@@ -21,7 +21,7 @@ const app: Express = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: config.frontendUrl,
+    origin: process.env.NODE_ENV === 'development' ? true : config.frontendUrl,
     credentials: true,
   })
 );

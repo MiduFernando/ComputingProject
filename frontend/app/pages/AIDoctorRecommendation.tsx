@@ -25,7 +25,7 @@ import {
   Shield,
   Users
 } from "lucide-react";
-import { projectId, publicAnonKey } from "/utils/supabase/info";
+import { projectId, publicAnonKey } from "../../../utils/supabase/info";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 interface DoctorRecommendation {

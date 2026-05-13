@@ -229,7 +229,7 @@ export function Home() {
               return (
                 <Card 
                   key={index} 
-                  className="border-2 border-teal-200 hover:border-teal-400 hover:shadow-2xl hover:shadow-teal-400/30 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 bg-white/95 backdrop-blur-md overflow-hidden group animate-in fade-in slide-in-from-bottom-4 duration-700"
+                  className="border-2 border-teal-200 hover:border-teal-400 hover:shadow-2xl hover:shadow-teal-400/30 transition-all transform hover:scale-110 hover:-translate-y-1 bg-white/95 backdrop-blur-md overflow-hidden group animate-in fade-in slide-in-from-bottom-4 duration-700"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-teal-400/10 to-transparent rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all"></div>
@@ -360,7 +360,7 @@ export function Home() {
           {/* Two Cards Side by Side */}
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* AI Recommendation Card */}
-            <Card className="border-2 border-teal-300 bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50 shadow-2xl hover:shadow-teal-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-left-4 duration-700">
+            <Card className="border-2 border-teal-300 bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50 shadow-2xl hover:shadow-teal-400/50 overflow-hidden transform hover:scale-105 transition-all group relative animate-in fade-in slide-in-from-left-4 duration-700">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all"></div>
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all"></div>
@@ -436,7 +436,7 @@ export function Home() {
             </Card>
 
             {/* QR Scanner Card */}
-            <Card className="border-2 border-cyan-300 bg-linear-to-br from-cyan-50 via-teal-50 to-blue-50 shadow-2xl hover:shadow-cyan-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-right-4 duration-700">
+            <Card className="border-2 border-cyan-300 bg-linear-to-br from-cyan-50 via-teal-50 to-blue-50 shadow-2xl hover:shadow-cyan-400/50 overflow-hidden transform hover:scale-105 transition-all group relative animate-in fade-in slide-in-from-right-4 duration-700">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all pointer-events-none"></div>

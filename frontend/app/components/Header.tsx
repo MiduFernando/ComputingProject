@@ -98,7 +98,7 @@ export function Header() {
               <>
                 <Link
                   to="/dashboard"
-                  className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2"
+                  className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2 border border-teal-500 rounded-lg hover:bg-teal-50"
                 >
                   <span className="relative z-10">{t("myAppointments")}</span>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>

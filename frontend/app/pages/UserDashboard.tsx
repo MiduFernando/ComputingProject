@@ -16,7 +16,7 @@ import {
 } from "../components/ui/table";
 import { Calendar, Clock, Hospital, User, Activity, CheckCircle2, XCircle } from "lucide-react";
 import { toast } from "sonner";
-import { projectId, publicAnonKey } from "/utils/supabase/info";
+import { projectId, publicAnonKey } from "../../../utils/supabase/info";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 interface Appointment {

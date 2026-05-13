@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
-import { projectId, publicAnonKey } from "/utils/supabase/info";
+import { projectId, publicAnonKey } from "../../../utils/supabase/info";
 import { Calendar, Clock, User, Phone, CheckCircle, XCircle, FileText, Activity, Users, TrendingUp, Stethoscope, Heart, UserCheck, Mail, AlertCircle, Star, Award, Timer, ClipboardList, UserCircle, MapPin } from "lucide-react";
 
 const API_URL = `https://${projectId}.supabase.co/functions/v1/make-server-6df55b61`;
