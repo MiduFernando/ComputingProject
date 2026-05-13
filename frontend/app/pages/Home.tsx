@@ -109,9 +109,9 @@ export function Home() {
         <div className="container mx-auto px-4 relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             {/* Main Title - Enhanced 3D Effect */}
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight relative">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight relative animate-in fade-in slide-in-from-bottom-4 duration-700">
               {/* Shadow Layer */}
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-800 to-cyan-800 bg-clip-text text-transparent blur-sm opacity-50">
+              <span className="absolute inset-0 bg-gradient-to-br from-teal-800 to-cyan-800 bg-clip-text text-transparent blur-sm opacity-60">
                 {t("welcomeTitle")}
               </span>
               {/* Main Layer */}
@@ -124,19 +124,19 @@ export function Home() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl mb-10 text-teal-50 font-medium drop-shadow-lg">
+            <p className="text-xl md:text-2xl mb-10 text-teal-50 font-medium drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
               {t("welcomeDesc")}
             </p>
 
             {/* CTA Buttons - Enhanced 3D Design */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
               <Button
                 size="lg"
                 onClick={() => navigate("/auth")}
-                className="bg-white text-teal-600 hover:bg-teal-50 text-lg px-10 py-7 shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all font-bold w-full sm:w-auto relative overflow-hidden group"
+                className="bg-white text-teal-600 hover:bg-teal-50 text-lg px-10 py-7 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 font-bold w-full sm:w-auto relative overflow-hidden group border-2 border-teal-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-cyan-400/20 to-teal-400/0 group-hover:translate-x-full transition-transform duration-1000"></div>
-                <UserCheck className="w-5 h-5 mr-2 relative z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover:translate-x-full transition-transform duration-1000"></div>
+                <UserCheck className="w-5 h-5 mr-2 relative z-10 group-hover:animate-bounce" />
                 <span className="relative z-10">{t("getStarted") || "Get Started"}</span>
               </Button>
             </div>
@@ -150,9 +150,9 @@ export function Home() {
       {/* Image Gallery Section - Enhanced */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 mb-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-20 animate-in fade-in duration-700">
             {/* Card 1 */}
-            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl group border-2 border-teal-100">
+            <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl hover:shadow-teal-400/50 group border-2 border-teal-200 transition-all duration-500 transform hover:scale-105">
               <ImageWithFallback
                 src={medicalTeamImage}
                 alt="Doctor consultation"
@@ -171,7 +171,7 @@ export function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl group border-2 border-cyan-100">
+            <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl hover:shadow-cyan-400/50 group border-2 border-cyan-200 transition-all duration-500 transform hover:scale-105">
               <ImageWithFallback
                 src={consultationImage}
                 alt="Healthcare team"
@@ -190,7 +190,7 @@ export function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl group border-2 border-blue-100">
+            <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl hover:shadow-blue-400/50 group border-2 border-blue-200 transition-all duration-500 transform hover:scale-105">
               <ImageWithFallback
                 src={facilitiesImage}
                 alt="Modern hospital"
@@ -210,16 +210,16 @@ export function Home() {
           </div>
 
           {/* Section Title - Enhanced */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-teal-700 bg-clip-text text-transparent blur-sm opacity-50">
+              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
                 Why Choose e-Health Connect?
               </span>
-              <span className="relative text-teal-600">
+              <span className="relative bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                 Why Choose e-Health Connect?
               </span>
             </h2>
-            <div className="w-24 h-1.5 bg-teal-500 mx-auto rounded-full"></div>
+            <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-teal-500 mx-auto rounded-full animate-pulse"></div>
           </div>
 
           {/* Features Grid - Enhanced 3D Cards */}
@@ -229,12 +229,13 @@ export function Home() {
               return (
                 <Card 
                   key={index} 
-                  className="border-2 border-teal-100 hover:border-teal-300 hover:shadow-2xl transition-all transform hover:scale-105 bg-white/90 backdrop-blur-sm overflow-hidden group"
+                  className="border-2 border-teal-200 hover:border-teal-400 hover:shadow-2xl hover:shadow-teal-400/30 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 bg-white/95 backdrop-blur-md overflow-hidden group animate-in fade-in slide-in-from-bottom-4 duration-700"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-teal-400/10 to-transparent rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all"></div>
                   <CardContent className="p-6 relative">
-                    <div className={`w-14 h-14 rounded-xl ${feature.bg} flex items-center justify-center mb-4 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all`}>
-                      <Icon className={`w-7 h-7 ${feature.color}`} />
+                    <div className={`w-16 h-16 rounded-xl ${feature.bg} flex items-center justify-center mb-4 shadow-lg transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-300`}>
+                      <Icon className={`w-8 h-8 ${feature.color}`} />
                     </div>
                     <h3 className="text-lg font-bold mb-2 text-gray-800">
                       {feature.title}
@@ -267,38 +268,39 @@ export function Home() {
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-40">
+              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
                 Our Impact in Numbers
               </span>
-              <span className="relative bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent">
                 Our Impact in Numbers
               </span>
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto rounded-full"></div>
+            <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-emerald-500 mx-auto rounded-full animate-pulse"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               const colors = [
-                { bg: 'from-teal-500 to-teal-600', glow: 'teal-400/30', border: 'border-teal-200/50' },
-                { bg: 'from-cyan-500 to-cyan-600', glow: 'cyan-400/30', border: 'border-cyan-200/50' },
-                { bg: 'from-purple-500 to-purple-600', glow: 'purple-400/30', border: 'border-purple-200/50' },
-                { bg: 'from-emerald-500 to-emerald-600', glow: 'emerald-400/30', border: 'border-emerald-200/50' }
+                { bg: 'from-teal-500 to-teal-600', glow: 'teal-400/30', border: 'border-teal-200/70' },
+                { bg: 'from-cyan-500 to-cyan-600', glow: 'cyan-400/30', border: 'border-cyan-200/70' },
+                { bg: 'from-purple-500 to-purple-600', glow: 'purple-400/30', border: 'border-purple-200/70' },
+                { bg: 'from-emerald-500 to-emerald-600', glow: 'emerald-400/30', border: 'border-emerald-200/70' }
               ];
               const color = colors[index];
 
               return (
                 <div 
                   key={index} 
-                  className="text-center group"
+                  className="text-center group animate-in fade-in slide-in-from-bottom-4 duration-700"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Card Container */}
-                  <div className={`bg-white/95 backdrop-blur-md rounded-2xl p-8 border-2 ${color.border} shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 relative overflow-hidden`}>
+                  <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 border-2 ${color.border} shadow-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 relative overflow-hidden`}>
                     {/* Decorative Corner Glow */}
-                    <div className={`absolute top-0 right-0 w-24 h-24 bg-${color.glow} rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity`}></div>
+                    <div className={`absolute top-0 right-0 w-24 h-24 bg-${color.glow} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                     
                     {/* Icon Container - Enhanced 3D */}
                     <div className="relative inline-block mb-4">
@@ -343,22 +345,22 @@ export function Home() {
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-50">
+              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
                 Smart Solutions
               </span>
               <span className="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
                 Smart Solutions
               </span>
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+            <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 mx-auto rounded-full animate-pulse"></div>
           </div>
 
           {/* Two Cards Side by Side */}
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* AI Recommendation Card */}
-            <Card className="border-2 border-teal-200 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 shadow-2xl overflow-hidden transform hover:scale-105 transition-all group relative">
+            <Card className="border-2 border-teal-300 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 shadow-2xl hover:shadow-teal-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-left-4 duration-700">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all"></div>
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all"></div>
@@ -423,10 +425,10 @@ export function Home() {
                   <Button
                     size="lg"
                     onClick={() => navigate("/ai-recommend")}
-                    className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 hover:from-teal-700 hover:via-cyan-700 hover:to-blue-700 text-white font-bold text-base px-6 py-5 shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all w-full relative overflow-hidden group/btn"
+                    className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 hover:from-teal-700 hover:via-cyan-700 hover:to-blue-700 text-white font-bold text-base px-8 py-6 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 w-full relative overflow-hidden group/btn border-2 border-teal-400/30 hover:border-teal-300"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/20 to-cyan-400/0 group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                    <Brain className="w-5 h-5 mr-2 relative z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+                    <Brain className="w-5 h-5 mr-2 relative z-10 group-hover/btn:animate-spin" />
                     <span className="relative z-10">Get AI Recommendations</span>
                   </Button>
                 </div>
@@ -434,7 +436,7 @@ export function Home() {
             </Card>
 
             {/* QR Scanner Card */}
-            <Card className="border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50 shadow-2xl overflow-hidden transform hover:scale-105 transition-all group relative">
+            <Card className="border-2 border-cyan-300 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50 shadow-2xl hover:shadow-cyan-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-right-4 duration-700">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all pointer-events-none"></div>
@@ -499,10 +501,10 @@ export function Home() {
                   <Button
                     size="lg"
                     onClick={() => navigate("/qr-scanner")}
-                    className="bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 hover:from-cyan-700 hover:via-teal-700 hover:to-blue-700 text-white font-bold text-base px-6 py-5 shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all w-full relative overflow-hidden group/btn"
+                    className="bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 hover:from-cyan-700 hover:via-teal-700 hover:to-blue-700 text-white font-bold text-base px-8 py-6 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 w-full relative overflow-hidden group/btn border-2 border-cyan-400/30 hover:border-cyan-300"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-white/20 to-teal-400/0 group-hover/btn:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
-                    <QrCode className="w-5 h-5 mr-2 relative z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-white/40 to-teal-400/0 group-hover/btn:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
+                    <QrCode className="w-5 h-5 mr-2 relative z-10 group-hover/btn:animate-bounce" />
                     <span className="relative z-10">Open QR Scanner</span>
                   </Button>
                 </div>

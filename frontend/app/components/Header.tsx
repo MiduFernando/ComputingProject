@@ -82,14 +82,14 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-6">
             <Link
               to="/"
-              className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2"
+              className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2 border border-teal-500 rounded-lg hover:bg-teal-50"
             >
               <span className="relative z-10">{t("home")}</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               to="/hospitals"
-              className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2"
+              className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2 border border-teal-500 rounded-lg hover:bg-teal-50"
             >
               <span className="relative z-10">{t("hospitals")}</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
@@ -201,7 +201,7 @@ export function Header() {
                 <Button 
                   size="sm" 
                   onClick={() => navigate("/auth")} 
-                  className="bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-600 hover:from-teal-700 hover:via-teal-600 hover:to-cyan-700 text-white font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                  className="bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-600 hover:from-teal-700 hover:via-teal-600 hover:to-cyan-700 text-white font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all px-4 py-2 h-9"
                 >
                   {t("login")}
                 </Button>
