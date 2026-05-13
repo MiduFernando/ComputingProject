@@ -78,7 +78,7 @@ export function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50/80 via-cyan-50/80 to-blue-50/80 relative overflow-hidden">
+    <div className="min-h-screen bg-linear-to-br from-teal-50/80 via-cyan-50/80 to-blue-50/80 relative overflow-hidden">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-3 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-teal-400/30 rounded-full blur-3xl animate-pulse"></div>
@@ -95,8 +95,8 @@ export function Home() {
             alt="Healthcare Professional"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/90 via-teal-600/85 to-blue-600/90"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-cyan-800/40 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-br from-cyan-600/90 via-teal-600/85 to-blue-600/90"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-cyan-800/40 via-transparent to-transparent"></div>
         </div>
 
         {/* Floating Elements */}
@@ -111,15 +111,15 @@ export function Home() {
             {/* Main Title - Enhanced 3D Effect */}
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight relative animate-in fade-in slide-in-from-bottom-4 duration-700">
               {/* Shadow Layer */}
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-800 to-cyan-800 bg-clip-text text-transparent blur-sm opacity-60">
+              <span className="absolute inset-0 bg-linear-to-br from-teal-800 to-cyan-800 bg-clip-text text-transparent blur-sm opacity-60">
                 {t("welcomeTitle")}
               </span>
               {/* Main Layer */}
-              <span className="relative bg-gradient-to-r from-white via-teal-50 to-cyan-50 bg-clip-text text-transparent drop-shadow-2xl">
+              <span className="relative bg-linear-to-r from-white via-teal-50 to-cyan-50 bg-clip-text text-transparent drop-shadow-2xl">
                 {t("welcomeTitle")}
               </span>
               {/* Highlight Layer */}
-              <span className="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent bg-clip-text text-transparent">
+              <span className="absolute inset-0 bg-linear-to-b from-white/60 to-transparent bg-clip-text text-transparent">
                 {t("welcomeTitle")}
               </span>
             </h1>
@@ -135,7 +135,7 @@ export function Home() {
                 onClick={() => navigate("/auth")}
                 className="bg-white text-teal-600 hover:bg-teal-50 text-lg px-10 py-7 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 font-bold w-full sm:w-auto relative overflow-hidden group border-2 border-teal-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover:translate-x-full transition-transform duration-1000"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover:translate-x-full transition-transform duration-1000"></div>
                 <UserCheck className="w-5 h-5 mr-2 relative z-10 group-hover:animate-bounce" />
                 <span className="relative z-10">{t("getStarted")}</span>
               </Button>
@@ -144,7 +144,7 @@ export function Home() {
         </div>
 
         {/* Bottom Gradient Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-teal-50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-teal-50 to-transparent"></div>
       </section>
 
       {/* Image Gallery Section - Enhanced */}
@@ -158,7 +158,7 @@ export function Home() {
                 alt="Doctor consultation"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-teal-900/90 via-teal-700/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-teal-900/90 via-teal-700/50 to-transparent"></div>
               <div className="absolute inset-0 flex items-end p-6">
                 <div className="transform group-hover:translate-y-0 translate-y-2 transition-transform">
                   <div className="w-12 h-12 bg-teal-500 rounded-xl flex items-center justify-center mb-3 shadow-lg">
@@ -177,7 +177,7 @@ export function Home() {
                 alt="Healthcare team"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-700/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-cyan-900/90 via-cyan-700/50 to-transparent"></div>
               <div className="absolute inset-0 flex items-end p-6">
                 <div className="transform group-hover:translate-y-0 translate-y-2 transition-transform">
                   <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center mb-3 shadow-lg">
@@ -196,7 +196,7 @@ export function Home() {
                 alt="Modern hospital"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-700/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-700/50 to-transparent"></div>
               <div className="absolute inset-0 flex items-end p-6">
                 <div className="transform group-hover:translate-y-0 translate-y-2 transition-transform">
                   <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-3 shadow-lg">
@@ -212,14 +212,14 @@ export function Home() {
           {/* Section Title - Enhanced */}
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
+              <span className="absolute inset-0 bg-linear-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
                 {t("whyChooseTitle")}
               </span>
-              <span className="relative bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="relative bg-linear-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                 {t("whyChooseTitle")}
               </span>
             </h2>
-            <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-teal-500 mx-auto rounded-full animate-pulse"></div>
+            <div className="w-32 h-2 bg-linear-to-r from-teal-500 via-cyan-500 to-teal-500 mx-auto rounded-full animate-pulse"></div>
           </div>
 
           {/* Features Grid - Enhanced 3D Cards */}
@@ -232,7 +232,7 @@ export function Home() {
                   className="border-2 border-teal-200 hover:border-teal-400 hover:shadow-2xl hover:shadow-teal-400/30 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 bg-white/95 backdrop-blur-md overflow-hidden group animate-in fade-in slide-in-from-bottom-4 duration-700"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-teal-400/10 to-transparent rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-teal-400/10 to-transparent rounded-full blur-2xl group-hover:w-32 group-hover:h-32 transition-all"></div>
                   <CardContent className="p-6 relative">
                     <div className={`w-16 h-16 rounded-xl ${feature.bg} flex items-center justify-center mb-4 shadow-lg transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-300`}>
                       <Icon className={`w-8 h-8 ${feature.color}`} />
@@ -252,7 +252,7 @@ export function Home() {
       {/* Stats Section */}
       <section className="py-20 relative overflow-hidden">
         {/* Background Pattern - Calmer */}
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-teal-100 via-cyan-100 to-blue-100"></div>
         <div className="absolute inset-0 opacity-20">
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1758691462848-ba1e929da259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVjaG5vbG9neSUyMGRpZ2l0YWwlMjBpbm5vdmF0aW9ufGVufDF8fHx8MTc3MTU4NzMzMnww&ixlib=rb-4.1.0&q=80&w=1080"
@@ -260,7 +260,7 @@ export function Home() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-teal-50/30 to-cyan-50/40"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-white/40 via-teal-50/30 to-cyan-50/40"></div>
 
         {/* Floating Elements - Softer */}
         <div className="absolute top-10 left-10 w-24 h-24 bg-cyan-300/10 rounded-full blur-2xl animate-pulse"></div>
@@ -270,14 +270,14 @@ export function Home() {
           {/* Section Title */}
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
+              <span className="absolute inset-0 bg-linear-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
                 {t("ourImpactTitle")}
               </span>
-              <span className="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent">
+              <span className="relative bg-linear-to-r from-teal-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent">
                 {t("ourImpactTitle")}
               </span>
             </h2>
-            <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-emerald-500 mx-auto rounded-full animate-pulse"></div>
+            <div className="w-32 h-2 bg-linear-to-r from-teal-500 via-cyan-500 to-emerald-500 mx-auto rounded-full animate-pulse"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -304,20 +304,20 @@ export function Home() {
                     
                     {/* Icon Container - Enhanced 3D */}
                     <div className="relative inline-block mb-4">
-                      <div className={`absolute inset-0 w-20 h-20 bg-gradient-to-br ${color.bg} rounded-2xl blur-lg opacity-50 group-hover:opacity-75 animate-pulse`}></div>
-                      <div className={`relative w-20 h-20 bg-gradient-to-br ${color.bg} rounded-2xl flex items-center justify-center shadow-xl transform group-hover:rotate-6 transition-all`}>
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent"></div>
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-tl from-black/20 to-transparent"></div>
+                      <div className={`absolute inset-0 w-20 h-20 bg-linear-to-br ${color.bg} rounded-2xl blur-lg opacity-50 group-hover:opacity-75 animate-pulse`}></div>
+                      <div className={`relative w-20 h-20 bg-linear-to-br ${color.bg} rounded-2xl flex items-center justify-center shadow-xl transform group-hover:rotate-6 transition-all`}>
+                        <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/20 to-transparent"></div>
+                        <div className="absolute inset-0 rounded-2xl bg-linear-to-tl from-black/20 to-transparent"></div>
                         <Icon className="w-9 h-9 text-white relative z-10 drop-shadow-lg" />
                       </div>
                     </div>
 
                     {/* Value */}
                     <div className="text-4xl md:text-5xl font-black mb-2 relative">
-                      <span className={`absolute inset-0 bg-gradient-to-br ${color.bg} bg-clip-text text-transparent blur-sm opacity-50`}>
+                      <span className={`absolute inset-0 bg-linear-to-br ${color.bg} bg-clip-text text-transparent blur-sm opacity-50`}>
                         {stat.value}
                       </span>
-                      <span className={`relative bg-gradient-to-r ${color.bg} bg-clip-text text-transparent`}>
+                      <span className={`relative bg-linear-to-r ${color.bg} bg-clip-text text-transparent`}>
                         {stat.value}
                       </span>
                     </div>
@@ -337,7 +337,7 @@ export function Home() {
       {/* AI Recommendation Feature Section - Only show when authenticated */}
       <section className="py-20 relative overflow-hidden">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50"></div>
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -347,20 +347,20 @@ export function Home() {
           {/* Section Title */}
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-4xl md:text-5xl font-black mb-4 relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
+              <span className="absolute inset-0 bg-linear-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-60">
                 {t("smartSolutions")}
               </span>
-              <span className="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="relative bg-linear-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
                 {t("smartSolutions")}
               </span>
             </h2>
-            <div className="w-32 h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 mx-auto rounded-full animate-pulse"></div>
+            <div className="w-32 h-2 bg-linear-to-r from-teal-500 via-cyan-500 to-blue-500 mx-auto rounded-full animate-pulse"></div>
           </div>
 
           {/* Two Cards Side by Side */}
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* AI Recommendation Card */}
-            <Card className="border-2 border-teal-300 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 shadow-2xl hover:shadow-teal-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-left-4 duration-700">
+            <Card className="border-2 border-teal-300 bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50 shadow-2xl hover:shadow-teal-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-left-4 duration-700">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all"></div>
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all"></div>
@@ -369,14 +369,14 @@ export function Home() {
                 <div className="flex flex-col items-center text-center">
                   {/* Icon - Enhanced 3D */}
                   <div className="relative mb-6">
-                    <div className="absolute inset-0 w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 animate-pulse"></div>
-                    <div className="relative w-20 h-20 bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl transform group-hover:rotate-6 transition-all">
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent"></div>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-tl from-black/20 to-transparent"></div>
+                    <div className="absolute inset-0 w-20 h-20 bg-linear-to-br from-teal-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 animate-pulse"></div>
+                    <div className="relative w-20 h-20 bg-linear-to-br from-teal-500 via-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl transform group-hover:rotate-6 transition-all">
+                      <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/20 to-transparent"></div>
+                      <div className="absolute inset-0 rounded-2xl bg-linear-to-tl from-black/20 to-transparent"></div>
                       <Brain className="w-10 h-10 text-white relative z-10 drop-shadow-lg" />
                       
                       {/* AI Badge */}
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-linear-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
                         <Sparkles className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -384,10 +384,10 @@ export function Home() {
 
                   {/* Title */}
                   <h3 className="text-2xl font-black mb-3 relative">
-                    <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-50">
+                    <span className="absolute inset-0 bg-linear-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-50">
                       {t("aiPoweredHealthcare")}
                     </span>
-                    <span className="relative bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                    <span className="relative bg-linear-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                       {t("aiPoweredHealthcare")}
                     </span>
                   </h3>
@@ -401,19 +401,19 @@ export function Home() {
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 mb-6 border-2 border-teal-100 shadow-lg w-full">
                     <ul className="text-sm text-gray-700 space-y-2">
                       <li className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-linear-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center shrink-0">
                           <Brain className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold">{t("intelligentSymptomAnalysis")}</span>
                       </li>
                       <li className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-linear-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center shrink-0">
                           <Users className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold">{t("personalizedDoctorMatching")}</span>
                       </li>
                       <li className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-linear-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center shrink-0">
                           <Sparkles className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold">{t("instantRecommendations")}</span>
@@ -425,9 +425,9 @@ export function Home() {
                   <Button
                     size="lg"
                     onClick={() => navigate("/ai-recommend")}
-                    className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 hover:from-teal-700 hover:via-cyan-700 hover:to-blue-700 text-white font-bold text-base px-8 py-6 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 w-full relative overflow-hidden group/btn border-2 border-teal-400/30 hover:border-teal-300"
+                    className="bg-linear-to-r from-teal-600 via-cyan-600 to-blue-600 hover:from-teal-700 hover:via-cyan-700 hover:to-blue-700 text-white font-bold text-base px-8 py-6 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 w-full relative overflow-hidden group/btn border-2 border-teal-400/30 hover:border-teal-300"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-teal-400/0 via-white/40 to-cyan-400/0 group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                     <Brain className="w-5 h-5 mr-2 relative z-10 group-hover/btn:animate-spin" />
                     <span className="relative z-10">{t("getAIRecommendations")}</span>
                   </Button>
@@ -436,7 +436,7 @@ export function Home() {
             </Card>
 
             {/* QR Scanner Card */}
-            <Card className="border-2 border-cyan-300 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50 shadow-2xl hover:shadow-cyan-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-right-4 duration-700">
+            <Card className="border-2 border-cyan-300 bg-linear-to-br from-cyan-50 via-teal-50 to-blue-50 shadow-2xl hover:shadow-cyan-400/50 overflow-hidden transform hover:scale-105 transition-all duration-500 group relative animate-in fade-in slide-in-from-right-4 duration-700">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 transition-all pointer-events-none"></div>
@@ -445,14 +445,14 @@ export function Home() {
                 <div className="flex flex-col items-center text-center">
                   {/* Icon - Enhanced 3D */}
                   <div className="relative mb-6">
-                    <div className="absolute inset-0 w-20 h-20 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 animate-pulse pointer-events-none"></div>
-                    <div className="relative w-20 h-20 bg-gradient-to-br from-cyan-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl transform group-hover:rotate-6 transition-all">
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent pointer-events-none"></div>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-tl from-black/20 to-transparent pointer-events-none"></div>
+                    <div className="absolute inset-0 w-20 h-20 bg-linear-to-br from-cyan-500 to-teal-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 animate-pulse pointer-events-none"></div>
+                    <div className="relative w-20 h-20 bg-linear-to-br from-cyan-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl transform group-hover:rotate-6 transition-all">
+                      <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/20 to-transparent pointer-events-none"></div>
+                      <div className="absolute inset-0 rounded-2xl bg-linear-to-tl from-black/20 to-transparent pointer-events-none"></div>
                       <QrCode className="w-10 h-10 text-white relative z-10 drop-shadow-lg" />
                       
                       {/* Scanner Badge */}
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-linear-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
                         <Camera className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -460,10 +460,10 @@ export function Home() {
 
                   {/* Title */}
                   <h3 className="text-2xl font-black mb-3 relative">
-                    <span className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-teal-700 bg-clip-text text-transparent blur-sm opacity-50">
+                    <span className="absolute inset-0 bg-linear-to-br from-cyan-700 to-teal-700 bg-clip-text text-transparent blur-sm opacity-50">
                       {t("qrCodeScanner")}
                     </span>
-                    <span className="relative bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+                    <span className="relative bg-linear-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
                       {t("qrCodeScanner")}
                     </span>
                   </h3>
@@ -477,19 +477,19 @@ export function Home() {
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 mb-6 border-2 border-cyan-100 shadow-lg w-full">
                     <ul className="text-sm text-gray-700 space-y-2">
                       <li className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-linear-to-br from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center shrink-0">
                           <Camera className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold">{t("quickCameraBasedScanning")}</span>
                       </li>
                       <li className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-linear-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center shrink-0">
                           <Shield className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold">{t("secureEncryptedAccess")}</span>
                       </li>
                       <li className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-linear-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center shrink-0">
                           <ScanLine className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold">{t("instantMedicalRecordRetrieval")}</span>
@@ -501,9 +501,9 @@ export function Home() {
                   <Button
                     size="lg"
                     onClick={() => navigate("/qr-scanner")}
-                    className="bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 hover:from-cyan-700 hover:via-teal-700 hover:to-blue-700 text-white font-bold text-base px-8 py-6 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 w-full relative overflow-hidden group/btn border-2 border-cyan-400/30 hover:border-cyan-300"
+                    className="bg-linear-to-r from-cyan-600 via-teal-600 to-blue-600 hover:from-cyan-700 hover:via-teal-700 hover:to-blue-700 text-white font-bold text-base px-8 py-6 shadow-2xl hover:shadow-cyan-500/70 transform hover:scale-110 transition-all duration-300 w-full relative overflow-hidden group/btn border-2 border-cyan-400/30 hover:border-cyan-300"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-white/40 to-teal-400/0 group-hover/btn:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-cyan-400/0 via-white/40 to-teal-400/0 group-hover/btn:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
                     <QrCode className="w-5 h-5 mr-2 relative z-10 group-hover/btn:animate-bounce" />
                     <span className="relative z-10">{t("openQRScanner")}</span>
                   </Button>

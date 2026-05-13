@@ -53,10 +53,10 @@ export function ForgotPassword() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <Card className="border-teal-100 shadow-lg">
-          <CardHeader className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-t-lg">
+          <CardHeader className="bg-linear-to-r from-teal-500 to-cyan-500 text-white rounded-t-lg">
             <div className="flex items-center gap-2 mb-2">
               <HeartPulse className="w-8 h-8" />
               <div>
@@ -99,7 +99,7 @@ export function ForgotPassword() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white text-base py-6 font-medium"
+                  className="w-full bg-linear-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white text-base py-6 font-medium"
                   disabled={loading}
                 >
                   {loading ? (
@@ -141,7 +141,7 @@ export function ForgotPassword() {
 
                 <Button
                   onClick={() => navigate("/login")}
-                  className="w-full bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white text-base py-6 font-medium"
+                  className="w-full bg-linear-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white text-base py-6 font-medium"
                 >
                   Back to Login
                 </Button>

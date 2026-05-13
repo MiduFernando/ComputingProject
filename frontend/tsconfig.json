@@ -26,6 +26,6 @@
       "@/*": ["./app/*"]
     }
   },
-  "include": ["app"],
+  "include": ["app", "vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

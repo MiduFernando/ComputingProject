@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { Globe, User, LogOut, Calendar, Settings, HeartPulse, LayoutDashboard, Activity, Shield } from "lucide-react";
+import { Globe, User, LogOut, Calendar, HeartPulse, LayoutDashboard, Activity } from "lucide-react";
 
 const flags = {
   en: "🇬🇧",
@@ -42,19 +42,19 @@ export function Header() {
             {/* Logo Icon with 3D Effect */}
             <div className="relative">
               {/* Outer Glow */}
-              <div className="absolute inset-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-400 to-cyan-500 blur-xl opacity-50 group-hover:opacity-75 transition-opacity animate-pulse"></div>
+              <div className="absolute inset-0 w-14 h-14 rounded-2xl bg-linear-to-br from-teal-400 to-cyan-500 blur-xl opacity-50 group-hover:opacity-75 transition-opacity animate-pulse"></div>
               
               {/* Main Logo Container */}
-              <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-600 flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-300">
+              <div className="relative w-14 h-14 rounded-2xl bg-linear-to-br from-teal-500 via-teal-600 to-cyan-600 flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-300">
                 {/* 3D Inner Shadow Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent"></div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tl from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/20 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-tl from-black/20 to-transparent"></div>
                 
                 {/* Icon */}
                 <HeartPulse className="w-7 h-7 text-white relative z-10 drop-shadow-lg animate-pulse" />
                 
                 {/* Activity Pulse Indicator */}
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full border-2 border-white shadow-lg">
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-linear-to-br from-green-400 to-emerald-500 rounded-full border-2 border-white shadow-lg">
                   <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-75"></div>
                 </div>
               </div>
@@ -64,14 +64,14 @@ export function Header() {
             <div className="flex flex-col">
               <span className="text-2xl font-black tracking-tight relative group-hover:scale-105 transition-transform">
                 {/* Text Shadow Layers for 3D Effect */}
-                <span className="absolute inset-0 bg-gradient-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-50">
+                <span className="absolute inset-0 bg-linear-to-br from-teal-700 to-cyan-700 bg-clip-text text-transparent blur-sm opacity-50">
                   {t("appName")}
                 </span>
-                <span className="relative bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent drop-shadow-lg">
+                <span className="relative bg-linear-to-r from-teal-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent drop-shadow-lg">
                   {t("appName")}
                 </span>
                 {/* Highlight Effect */}
-                <span className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent bg-clip-text text-transparent">
+                <span className="absolute inset-0 bg-linear-to-b from-white/40 to-transparent bg-clip-text text-transparent">
                   {t("appName")}
                 </span>
               </span>
@@ -85,14 +85,14 @@ export function Header() {
               className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2 border border-teal-500 rounded-lg hover:bg-teal-50"
             >
               <span className="relative z-10">{t("home")}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               to="/hospitals"
               className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2 border border-teal-500 rounded-lg hover:bg-teal-50"
             >
               <span className="relative z-10">{t("hospitals")}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
             {isAuthenticated && (
               <>
@@ -101,7 +101,7 @@ export function Header() {
                   className="relative text-gray-700 hover:text-teal-600 font-bold transition-all group px-3 py-2"
                 >
                   <span className="relative z-10">{t("myAppointments")}</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-teal-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </>
             )}
@@ -154,7 +154,7 @@ export function Header() {
                     size="sm" 
                     className="gap-2 border-teal-200 hover:border-teal-400 hover:bg-teal-50 transition-all shadow-sm hover:shadow-md"
                   >
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-linear-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
                       <User className="w-3.5 h-3.5 text-white" />
                     </div>
                     <span className="hidden sm:inline font-semibold text-gray-700">{user?.name}</span>
@@ -201,7 +201,7 @@ export function Header() {
                 <Button 
                   size="sm" 
                   onClick={() => navigate("/auth")} 
-                  className="bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-600 hover:from-teal-700 hover:via-teal-600 hover:to-cyan-700 text-white font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all px-4 py-2 h-9"
+                  className="bg-linear-to-r from-teal-600 via-teal-500 to-cyan-600 hover:from-teal-700 hover:via-teal-600 hover:to-cyan-700 text-white font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all px-4 py-2 h-9"
                 >
                   {t("login")}
                 </Button>
